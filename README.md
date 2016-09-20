@@ -16,3 +16,7 @@ Our perfect solution would be to create a centralized web application that will 
 <h3><b>The END: </b><br></h3>
 In result, HATS has implemented an automated visitation process for OCCC by creating a website for the visitors to submit an online form. The visitors are able to input all of their information and add any additional visitors.  Once finished, they can submit the form and will be processed and sent to the database were OCCC staff can approve the form. From there, the OCCC Staff can approve and verify meeting times and general information of the visitors.
 
+
+<h3><b>The PROCESS: </b><br></h3>
+
+<h3><b>The INSTALL: </b><br></h3>
