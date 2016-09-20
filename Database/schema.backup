@@ -1,0 +1,611 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.4
+-- Dumped by pg_dump version 9.5.4
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: approve; Type: TABLE; Schema: public; Owner: hacc2016man
+--
+
+CREATE TABLE approve (
+    id integer NOT NULL,
+    visitid integer NOT NULL,
+    approvedeny boolean,
+    authorizer character varying(30),
+    reason character varying(300),
+    date timestamp without time zone
+);
+
+
+ALTER TABLE approve OWNER TO hacc2016man;
+
+--
+-- Name: approve_id_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE approve_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE approve_id_seq OWNER TO hacc2016man;
+
+--
+-- Name: approve_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE approve_id_seq OWNED BY approve.id;
+
+
+--
+-- Name: approve_visitid_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE approve_visitid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE approve_visitid_seq OWNER TO hacc2016man;
+
+--
+-- Name: approve_visitid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE approve_visitid_seq OWNED BY approve.visitid;
+
+
+--
+-- Name: externalusers; Type: TABLE; Schema: public; Owner: hacc2016man
+--
+
+CREATE TABLE externalusers (
+    id integer NOT NULL,
+    username text,
+    password text,
+    salt text,
+    enc_pass text
+);
+
+
+ALTER TABLE externalusers OWNER TO hacc2016man;
+
+--
+-- Name: externalusers_id_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE externalusers_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE externalusers_id_seq OWNER TO hacc2016man;
+
+--
+-- Name: externalusers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE externalusers_id_seq OWNED BY externalusers.id;
+
+
+--
+-- Name: verify; Type: TABLE; Schema: public; Owner: hacc2016man
+--
+
+CREATE TABLE verify (
+    id integer NOT NULL,
+    visitid integer NOT NULL,
+    vtarrive timestamp without time zone,
+    vtexit timestamp without time zone
+);
+
+
+ALTER TABLE verify OWNER TO hacc2016man;
+
+--
+-- Name: verify_id_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE verify_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE verify_id_seq OWNER TO hacc2016man;
+
+--
+-- Name: verify_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE verify_id_seq OWNED BY verify.id;
+
+
+--
+-- Name: verify_visitid_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE verify_visitid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE verify_visitid_seq OWNER TO hacc2016man;
+
+--
+-- Name: verify_visitid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE verify_visitid_seq OWNED BY verify.visitid;
+
+
+--
+-- Name: visitorid; Type: TABLE; Schema: public; Owner: hacc2016man
+--
+
+CREATE TABLE visitorid (
+    id integer NOT NULL,
+    visitid integer NOT NULL,
+    applicationdate timestamp without time zone,
+    ifname character varying(30),
+    imname character varying(3),
+    ilname character varying(30),
+    visitdate date,
+    visittime time without time zone,
+    consentcheck boolean,
+    agreementcheck boolean,
+    dresscheck boolean
+);
+
+
+ALTER TABLE visitorid OWNER TO hacc2016man;
+
+--
+-- Name: visitors; Type: TABLE; Schema: public; Owner: hacc2016man
+--
+
+CREATE TABLE visitors (
+    id integer NOT NULL,
+    visitid integer NOT NULL,
+    visitornumber smallint,
+    vfname character varying(25),
+    vmname character varying(3),
+    vlname character varying(25),
+    vdob date,
+    vrelation character varying(30),
+    vssn character varying(9),
+    vaddress character varying(30),
+    vcity character varying(30),
+    vzip character varying(5),
+    vemail character varying(30),
+    vphone character varying(10),
+    minorstatus boolean
+);
+
+
+ALTER TABLE visitors OWNER TO hacc2016man;
+
+--
+-- Name: visit_view; Type: VIEW; Schema: public; Owner: hacc2016man
+--
+
+CREATE VIEW visit_view AS
+ SELECT visitorid.ifname,
+    visitorid.imname,
+    visitorid.ilname,
+    visitorid.visitdate,
+    visitorid.visittime,
+    visitors.vfname,
+    visitors.vlname,
+    approve.authorizer
+   FROM ((visitors
+     JOIN visitorid ON ((visitors.visitid = visitorid.visitid)))
+     JOIN approve ON ((approve.visitid = visitorid.visitid)));
+
+
+ALTER TABLE visit_view OWNER TO hacc2016man;
+
+--
+-- Name: visitdefinition; Type: TABLE; Schema: public; Owner: hacc2016man
+--
+
+CREATE TABLE visitdefinition (
+    visittype smallint,
+    visitdefinition character varying(25)
+);
+
+
+ALTER TABLE visitdefinition OWNER TO hacc2016man;
+
+--
+-- Name: visitorid_id_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE visitorid_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE visitorid_id_seq OWNER TO hacc2016man;
+
+--
+-- Name: visitorid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE visitorid_id_seq OWNED BY visitorid.id;
+
+
+--
+-- Name: visitorid_visitid_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE visitorid_visitid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE visitorid_visitid_seq OWNER TO hacc2016man;
+
+--
+-- Name: visitorid_visitid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE visitorid_visitid_seq OWNED BY visitorid.visitid;
+
+
+--
+-- Name: visitors_id_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE visitors_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE visitors_id_seq OWNER TO hacc2016man;
+
+--
+-- Name: visitors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE visitors_id_seq OWNED BY visitors.id;
+
+
+--
+-- Name: visitors_visitid_seq; Type: SEQUENCE; Schema: public; Owner: hacc2016man
+--
+
+CREATE SEQUENCE visitors_visitid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE visitors_visitid_seq OWNER TO hacc2016man;
+
+--
+-- Name: visitors_visitid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: hacc2016man
+--
+
+ALTER SEQUENCE visitors_visitid_seq OWNED BY visitors.visitid;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY approve ALTER COLUMN id SET DEFAULT nextval('approve_id_seq'::regclass);
+
+
+--
+-- Name: visitid; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY approve ALTER COLUMN visitid SET DEFAULT nextval('approve_visitid_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY externalusers ALTER COLUMN id SET DEFAULT nextval('externalusers_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY verify ALTER COLUMN id SET DEFAULT nextval('verify_id_seq'::regclass);
+
+
+--
+-- Name: visitid; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY verify ALTER COLUMN visitid SET DEFAULT nextval('verify_visitid_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY visitorid ALTER COLUMN id SET DEFAULT nextval('visitorid_id_seq'::regclass);
+
+
+--
+-- Name: visitid; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY visitorid ALTER COLUMN visitid SET DEFAULT nextval('visitorid_visitid_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY visitors ALTER COLUMN id SET DEFAULT nextval('visitors_id_seq'::regclass);
+
+
+--
+-- Name: visitid; Type: DEFAULT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY visitors ALTER COLUMN visitid SET DEFAULT nextval('visitors_visitid_seq'::regclass);
+
+
+--
+-- Data for Name: approve; Type: TABLE DATA; Schema: public; Owner: hacc2016man
+--
+
+COPY approve (id, visitid, approvedeny, authorizer, reason, date) FROM stdin;
+1	1	t	Jayson Hayworth	Because he told me to	2016-09-18 00:00:01
+2	2	t	Kevin Ryan	Because he told me to	2016-09-18 00:00:01
+3	3	t	Gerome Catbagan	Because he told me to	2016-09-18 00:00:01
+4	4	\N	Kenneth Dedicatoria	Because he told me to	2016-09-18 00:00:01
+5	1	\N	\N	\N	\N
+6	2	\N	\N	\N	\N
+7	3	\N	\N	\N	\N
+8	4	\N	\N	\N	\N
+9	5	\N	\N	\N	\N
+\.
+
+
+--
+-- Name: approve_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('approve_id_seq', 9, true);
+
+
+--
+-- Name: approve_visitid_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('approve_visitid_seq', 4, true);
+
+
+--
+-- Data for Name: externalusers; Type: TABLE DATA; Schema: public; Owner: hacc2016man
+--
+
+COPY externalusers (id, username, password, salt, enc_pass) FROM stdin;
+\.
+
+
+--
+-- Name: externalusers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('externalusers_id_seq', 1, false);
+
+
+--
+-- Data for Name: verify; Type: TABLE DATA; Schema: public; Owner: hacc2016man
+--
+
+COPY verify (id, visitid, vtarrive, vtexit) FROM stdin;
+\.
+
+
+--
+-- Name: verify_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('verify_id_seq', 1, true);
+
+
+--
+-- Name: verify_visitid_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('verify_visitid_seq', 1, true);
+
+
+--
+-- Data for Name: visitdefinition; Type: TABLE DATA; Schema: public; Owner: hacc2016man
+--
+
+COPY visitdefinition (visittype, visitdefinition) FROM stdin;
+1	Regular Visit
+2	Special Visit
+3	Correspondence Visit
+\.
+
+
+--
+-- Data for Name: visitorid; Type: TABLE DATA; Schema: public; Owner: hacc2016man
+--
+
+COPY visitorid (id, visitid, applicationdate, ifname, imname, ilname, visitdate, visittime, consentcheck, agreementcheck, dresscheck) FROM stdin;
+1	1	2016-09-18 12:05:30	John	NMI	Doe	2016-09-20	02:12:03	t	t	t
+2	2	2016-09-18 12:05:30	John	NMI	Doe	2016-09-20	02:12:03	t	t	t
+3	3	2016-09-18 12:05:30	John	NMI	Doe	2016-09-20	02:12:03	t	t	t
+4	4	2016-09-18 12:05:30	John	NMI	Doe	2016-09-20	02:12:03	t	t	t
+9	5	2016-09-18 15:32:21	Kofi	A	Sweeney	2016-09-24	00:12:11	t	t	t
+\.
+
+
+--
+-- Name: visitorid_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('visitorid_id_seq', 9, true);
+
+
+--
+-- Name: visitorid_visitid_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('visitorid_visitid_seq', 4, true);
+
+
+--
+-- Data for Name: visitors; Type: TABLE DATA; Schema: public; Owner: hacc2016man
+--
+
+COPY visitors (id, visitid, visitornumber, vfname, vmname, vlname, vdob, vrelation, vssn, vaddress, vcity, vzip, vemail, vphone, minorstatus) FROM stdin;
+1	1	10	Gabriel	M	Farinas	\N	Brother	111223333	House1	Honolulu	96819	gfarinas@hawaii.edu	8089119111	f
+2	2	20	Derrick	X	Le	\N	Brother	111223334	House2	Honolulu	96819	duongle@hawaii.edu	8089119111	t
+3	3	30	Ben	X	Lamosao	\N	Brother	111223335	House3	Honolulu	96819	ben@hawaii.edu	8089119111	t
+4	1	1	Thomas	A	Lee	1993-12-04	Dad	428184928	Dem California Streetz	Poly Mona	96792	example@example.com	8081928283	\N
+5	1	2	Kaiewa	D	Bello	1995-01-12	Mom	573231827	83-201 Waimanalo St	Waimanalo	96792	example@example.com	8083829938	\N
+6	2	1	Judd	K	Yachin	1980-01-23	Uncle	182392837	849-1923 Kinau St	Honolulu	96817	example@example.com	8083827392	\N
+7	2	2	Lazzaro	B	Fulco	1985-04-15	Uncle	183943827	849-1923 Kinau St	Honolulu	96817	example@example.com	8082938473	\N
+8	3	1	Jerker	G	Baldwin	1960-11-15	Son	183943827	84-203 Farrington Hwy	Honolulu	96817	example@example.com	8082938473	\N
+9	4	1	Hyram	N	Aegidius	1997-12-15	Daughter	192389403	19-212 Apple St	Honolulu	96817	example@example.com	8084928374	\N
+10	4	2	Joktan	A	Emmanuhel	1920-01-01	Dad	183939283	11 Gerome Way	Honolulu	96817	example@example.com	8082938493	\N
+11	5	1	Shamsuddin	D	Emmanuhel	1970-05-13	Dad	183939283	91 Piikoi St	Honolulu	96817	example@example.com	8082938493	\N
+\.
+
+
+--
+-- Name: visitors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('visitors_id_seq', 11, true);
+
+
+--
+-- Name: visitors_visitid_seq; Type: SEQUENCE SET; Schema: public; Owner: hacc2016man
+--
+
+SELECT pg_catalog.setval('visitors_visitid_seq', 3, true);
+
+
+--
+-- Name: approve_pkey; Type: CONSTRAINT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY approve
+    ADD CONSTRAINT approve_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: externalusers_pkey; Type: CONSTRAINT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY externalusers
+    ADD CONSTRAINT externalusers_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: externalusers_username_key; Type: CONSTRAINT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY externalusers
+    ADD CONSTRAINT externalusers_username_key UNIQUE (username);
+
+
+--
+-- Name: verify_pkey; Type: CONSTRAINT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY verify
+    ADD CONSTRAINT verify_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: visitorid_pkey; Type: CONSTRAINT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY visitorid
+    ADD CONSTRAINT visitorid_pkey PRIMARY KEY (visitid);
+
+
+--
+-- Name: visitors_pkey; Type: CONSTRAINT; Schema: public; Owner: hacc2016man
+--
+
+ALTER TABLE ONLY visitors
+    ADD CONSTRAINT visitors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
