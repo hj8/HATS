@@ -1,8 +1,6 @@
 # Hawaii Advanced Technology Society's HACC submission. 
 https://www.youtube.com/watch?v=fx9EGhxjhnI 
 
-http://hacc.hats.team:81/Registration.html
-
 <h3><b>The WHY:</b><br></h3>
 Oahu Community Correctional Center has a lengthy and troublesome visitation process.  Many of the visitors fill out numerous forms and wait all day just to get denied because of something missing.  
 
@@ -18,5 +16,12 @@ In result, HATS has implemented an automated visitation process for OCCC by crea
 
 
 <h3><b>The PROCESS: </b><br></h3>
+
+Step 1: Registration for Visit Request - http://hacc.hats.team:81/Registration.html
+Step 2: Authorization for a Visit Request - http://hacc.hats.team:83/
+Step 3: Verification of Arrival of Visitor - http://hacc.hats.team:84/
+Step 4: ? 
+Step 5: Profit
+
 
 <h3><b>The INSTALL: </b><br></h3>
