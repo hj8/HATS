@@ -18,8 +18,8 @@ In result, HATS has implemented an automated visitation process for OCCC by crea
 <h3><b>The PROCESS: </b><br></h3>
 
 Step 1: Registration for Visit Request - http://hacc.hats.team:81/Registration.html<br>
-Step 2: Authorization for a Visit Request - http://hacc.hats.team:83/<br>
-Step 3: Verification of Arrival of Visitor - http://hacc.hats.team:84/<br>
+Step 2: Authorization of a Visit Request - http://hacc.hats.team:83/<br>
+Step 3: Verification for Arrival/Departure of Visitor - http://hacc.hats.team:84/<br>
 Step 4: ? <br>
 Step 5: Profit<br>
 
