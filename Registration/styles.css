@@ -1,0 +1,16 @@
+form { 
+  margin: 0 auto; 
+  width: 1000px;
+
+}
+.border {
+  width: 1000px;
+  background-color: transparent; 
+  border-bottom-style: double;
+ <!-- border-radius: 10px; -->
+  border-width: 1px;
+  border-color: #000000; 
+  <!--box-shadow: 2px 2px 2px #cccccc;-->
+  width: 1000px;
+  margin: 0 auto; 
+}

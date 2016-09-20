@@ -1,0 +1,138 @@
+
+
+<html><head><title>OCCC Registration</title>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Serif">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid Serif">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "PT Serif", serif
+    }
+    
+    .w3-navbar,
+    h1,
+    button {
+        font-family: "Droid Serif", serif
+    }
+    
+    .fa-anchor,
+    .fa-coffee {
+        font-size: 200px
+    }
+</style>
+
+</head><body style="background-color: #ffffff;">
+    <!-- Navbar -->
+    <ul class="w3-navbar w3-black w3-card-2 w3-top w3-left-align w3-large">
+        <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+            <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        </li>
+        <li><a href="index.html" class="w3-padding-large w3-white">Home</a></li>
+        <li class="w3-hide-small"><a href="AboutUs.html" class="w3-padding-large w3-hover-white">About Us</a></li>
+        <li class="w3-hide-small"><a href="Registration.html" class="w3-padding-large w3-hover-white">Registration</a></li>
+        <li class="w3-hide-small"><a href="VisitationStatus.html" class="w3-padding-large w3-hover-white">Visitation Status</a></li>
+        <li class="w3-hide-small"><a href="ContactUs.html" class="w3-padding-large w3-hover-white">Contact Us</a></li>
+    </ul>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
+        <ul class="w3-navbar w3-left-align w3-large w3-black">
+            <li><a class="w3-padding-large" href="AboutUs.html">About Us</a></li>
+            <li><a class="w3-padding-large" href="Registration.html">Registration</a></li>
+            <li><a class="w3-padding-large" href="VisitationStatus.html">Visitation Status</a></li>
+            <li><a class="w3-padding-large" href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <!-- Header -->
+
+    
+        <div class="w3-container w3-black w3-center w3-padding-128">
+        <div id="backimg" style="background-image: url('http://hacc.hats.team:81/OCCCedited.jpg'); background-repeat: no-repeat; background-position: center;  background-size: cover;">
+            <h3 style="color:"></h3>
+            <div class="entry-content">
+                <p><br><br><br><br><br></p>
+                <h3 style="text-align: center; color: white; font-size: 60px; text-shadow: 2px 2px #000000;">Oahu Community Correctional Center (OCCC)<br> Visitation Scheduling Form 
+                </h3>
+                <br>
+                <style>
+                    .alignnone.size-medium.wp-image-547.gform_button {
+                        text-align: center;
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+                    }
+                </style>
+            </div>
+        </div>
+</div>
+<button id="id01-1" onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-purple w3-large w3-padding">Sign Up</button>
+
+<div id="id01" class="w3-modal w3-padding-64">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container w3-purple"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
+      <h2>Sign Up</h2>
+    </header>
+    <div class="w3-container">
+	  <h4><b>Sign Up</b></h4>
+	  <form class="modal-content animate" method="post" action="signup.php">
+	  <div class="w3-container">
+	  <label><b>First Name</b></label>
+	  <input type="text" placeholder="First Name" name="firstName" required>
+          <label><b>Last Name</b></label>
+	  <input type="text" placeholder="Last Name" name="lastName" required>
+	  <label><b>Email</b></label>
+	  <input type="text" placeholder="Email" name="emailAddress" required>
+	  <label><b>Password</b></label>
+	  <input type="text" placeholder="Set A Password" name="setPassword" required>
+	  </form>
+     </div>
+    </div>
+        <footer class="w3-purple w3-content">
+	</div>
+        </footer>
+	</div>
+    </div>
+
+<button id="id02-1" onclick="document.getElementById('id02').style.display='block'" class="w3-btn w3-purple w3-large w3-padding">Login</button>
+
+<div id="id02" class="w3-modal w3-padding-64">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container w3-purple"> 
+      <span onclick="document.getElementById('id02').style.display='none'" class="w3-closebtn">&times;</span>
+      <h2>Login</h2>
+    </header>
+    <div class="w3-container">
+	  <h4><b>Log In</b></h4>
+	  <form class=modal-content animate" method="post" action="login.php">
+	  
+	  <div class="w3-container">
+	  
+	  <label><B>Username</b></label>
+	  <input type="text" placeholder="Enter Username" name="uname" required>
+          
+	  <label><b>Password</b></label>
+	  <input type="password" placeholder="Enter Password" name="upass" required>
+
+	  <button type="submit">Login</button>
+	  <input type="checkbox" checked="checked"> Remember me
+    </div>
+    <div class="w3-container">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw"> <a href="#">Forgot password?</a></span>
+    </div>
+    </form>
+    </div>
+        <footer class="w3-purple w3-content">
+	</div>
+        </footer>
+	</div>
+    </div>
+</body>
+</html>

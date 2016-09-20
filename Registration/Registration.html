@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OCCC Registration</title>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Serif">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid Serif">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "PT Serif", serif
+        }
+        
+        .w3-navbar,
+        h1,
+        button {
+            font-family: "Droid Serif", serif
+        }
+        
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #ffffff;">
+    <!-- Navbar -->
+    <ul class="w3-navbar w3-black w3-card-2 w3-top w3-left-align w3-large">
+        <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+            <a class="w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        </li>
+        <li><a href="index.html" class="w3-padding-large w3-hover-white">Home</a></li>
+        <li class="w3-hide-small"><a href="AboutUs.html" class="w3-padding-large w3-hover-white">About Us</a></li>
+        <li class="w3-hide-small"><a href="Registration.html" class="w3-padding-large w3-white">Registration</a></li>
+        <li class="w3-hide-small"><a href="VisitationStatus.html" class="w3-padding-large w3-hover-white">Visitation Status</a></li>
+        <li class="w3-hide-small"><a href="ContactUs.html" class="w3-padding-large w3-hover-white">Contact Us</a></li>
+    </ul>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
+        <ul class="w3-navbar w3-left-align w3-large w3-black">
+            <li><a class="w3-padding-large" href="AboutUs.html">About Us</a></li>
+            <li><a class="w3-padding-large" href="Registration.html">Registration</a></li>
+            <li><a class="w3-padding-large" href="VisitationStatus.html">Visitation Status</a></li>
+            <li><a class="w3-padding-large" href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <!-- Header -->
+
+
+    <!-- <div class="w3-container w3-black w3-center w3-padding-128"> -->
+    <div id="backimg" style="background-image: url('http://hacc.hats.team:81/OCCCedited.jpg'); background-repeat: no-repeat; background-position: center;  background-size: cover;">
+        <div class="entry-content">
+            <p><br><br><br><br><br></p>
+            <h3 style="text-align: center; color: white; font-size: 60px; text-shadow: 2px 2px #000000;">Oahu Community Correctional Center (OCCC)<br> Visitation Scheduling Form
+            </h3>
+            <br>
+            <style>
+                .alignnone.size-medium.wp-image-547.gform_button {
+                    text-align: center;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                }
+            </style>
+        </div>
+    </div>
+
+
+    <!-- <h1 class="w3-margin w3-jumbo">Oahu Community Correctional Center (OCCC) Visitation Scheduling Form</h1> -->
+
+
+    <!--#####################################FIRST VISITOR######################################-->
+    <form method="post" action="test.php">
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <!-- <div class="w3-content"> -->
+            <!-- <div class="w3-twothird"> -->
+            <div align="middle">
+                <img src="http://hacc.hats.team:81/stateofhawaii.jpg" alt="HTML5 Icon" style="width:200px;height:125px;" align="center">
+            </div>
+
+            <div align="center">
+                <h5><b class="w3-serif">STATE OF HAWAII<br>DEPARTMENT OF PUBLIC SAFETY<br>OAHU COMMUNITY CORRECTIONAL CENTER</b></h5>
+            </div>
+            <center>
+                <h3><b class="w3-serif">VISITING AND/OR CORRESPONDENCE APPLICATION</b></h3>
+            </center>
+            <hr class="w3-border-green w3-border w3-round-jumbo w3-card-2">
+            <div class="w3-row w3-row-padding w3-padding-8">
+                <div class="w3-col l5 m5">
+                    <label>Inmate First Name</label>
+                    <input type="text" name="iFName" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="iFName" placeholder="John" maxlength="30" required="">
+                </div>
+                <div class="w3-col l2 m2">
+                    <label>Inmate M.I.</label>
+                    <input type="text" name="iMName" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="iMName" placeholder="NMI" maxlength="3" required="">
+                </div>
+                <div class="w3-col l5 m5">
+                    <label>Inmate Last Name</label>
+                    <input type="text" name="iLName" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="iLName" placeholder="Doe" maxlength="30" required="">
+                </div>
+            </div>
+            <div class="w3-row w3-row-padding  w3-padding-8">
+                <div class="w3-col l3"><a>&nbsp;</a></div>
+                <div class="w3-col l3">
+                    <label>Visit Date</label>
+                    <input type="date" name="visitDate" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="visitDate" required="">
+                </div>
+                <div class="w3-col l2">
+                    <label>Visit Time</label>
+                    <input type="time" name="visitTime" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="visitTime" required="">
+                </div>
+            </div>
+            <div class="w3-row w3-row-padding  w3-padding-8 w3-center">
+                <a class="w3-large">Requesting permission for: </a><br>
+
+                <input type="checkbox" name="visitType1" class="w3-check" id="visitType1" value="1"> Regular Visit
+                <input type="checkbox" name="visitType2" class="w3-check" id="visitType2" value="1"> Special Visit
+                <input type="checkbox" name="visitType3" class="w3-check" id="visitType3" value="1"> Correspondence
+
+            </div>
+            <hr class="w3-border w3-border-green w3-round-jumbo w3-card-2">
+            <div>
+                <h3>
+                    <center>Visitor Information</center>
+                </h3>
+            </div>
+            <div class="w3-row w3-row-padding w3-padding-8">
+                <div class="w3-col l5 m5 s5">
+                    <label>First Name</label>
+                    <input type="text" name="vFName1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vFName1" placeholder="First Name" maxlength="30" required="">
+                </div>
+                <div class="w3-col l2 m2 s2">
+                    <label>M.I.</label>
+                    <input type="text" name="vMName1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vMName1" placeholder="Middle Initial" maxlength="3" required="">
+                </div>
+                <div class="w3-col l5 m5 s5">
+                    <label>Last Name</label>
+                    <input type="text" name="vLName1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vLName1" placeholder="Last Name" maxlength="30" required="">
+                </div>
+            </div>
+            <div class="w3-row w3-row-padding w3-padding-8">
+                <div class="w3-col l3 m3 s3">
+                    <label>Date of Birth</label>
+                    <input type="date" name="vDOB1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vDOB1" placeholder="Visitor date of birth" required="">
+                </div>
+                <div class="w3-col l5 m5 s5">
+                    <label>Email Address</label>
+                    <input type="text" name="vEmail1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vEmail1" placeholder="Email" maxlength="25" required="">
+                </div>
+                <div class="w3-col l2 m2 s2">
+                    <label>Phone Number</label>
+                    <input type="text" name="vPhone1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vPhone1" placeholder="Phone Number" maxlength="10" minlength="10" required="" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+                </div>
+                <div class="w3-col l2 m2 s2">
+                    <label>SSN</label>
+                    <input type="text" name="vSSN1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vSSN1" placeholder="SSN" maxlength="9" minlength="9" required="" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+                </div>
+            </div>
+            <div class="w3-row w3-row-padding w3-padding-8">
+                <div class="w3-col l4 m4 s4">
+                    <label>Street Address</label>
+                    <input type="text" name="vAddress1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vAddress1" placeholder="Address" maxlength="30" required="">
+                </div>
+                <div class="w3-col l3 m3 s3">
+                    <label>City</label>
+                    <input type="text" name="vCity1" class="w3-input w3-border w3-round w3-card-2 w3-card-2 w3-hover-shadow" id="vCity1" placeholder="City" maxlength="30" required="">
+                </div>
+                <div class="w3-col l1 m1 s1">
+                    <label>Zip Code</label>
+                    <input type="text" name="vZip1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vZip1" placeholder="Zip" maxlength="5" minlength="5" required="" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+                </div>
+                <div class="w3-col l4 m4 s4">
+                    <label>Relationship to Inmate</label>
+                    <input type="text" name="vRelation1" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vRelation1" placeholder="Relationship" maxlength="30" required="">
+                </div>
+            </div>
+            <div class="w3-row-padding w3-row w3-padding-8">
+                <div class="w3-col l10 m10 s10">
+                    <p class="drawItDesc">Visitor #1 Signature</p>
+                    <div class="sigPad">
+                        <canvas class="pad w3-border w3-round w3-card-2 w3-hover-shadow" id="canvasPad1" width="600px" height="80px" style="border:1px solid #000000"></canvas>
+                        <input type="hidden" name="dataPad1" class="output" id="dataPad1" value="">
+                    </div>
+                    <button name="test1" onclick="clearCanvas('1')">Clear Signature</button>
+                </div>
+            </div>
+	    <hr class="w3-border w3-border-green w3-round-jumbo w3-card-2">
+	    <!--#####################################Begin Policies######################################-->
+	    <button id="id01-1" onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-red w3-large w3-padding w3-center">Accept Dress Code</button>
+
+<div id="id01" class="w3-modal w3-padding">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container w3-red"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">&times;</span>
+      <h2>Dress Code Policy</h2>
+    </header>
+    <div class="w3-container">
+	  <h4><b>VISITOR DRESS CODE</b></h4>
+	  <p>Visitors will dress in a neat, appropriate, and conservative manner which is not unduly
+provocative, suggestive, or revealing, and does not resemble inmate attire or present
+adornments, or any clothing deemed inappropriate by staff. Medical alert bracelets, ID tags,
+and medical-approved eyewear are permitted.</p>
+	  <p>Female visitors will inform the female Search ACO of their menstrual period. Visitors shall be
+required to remove and change sanitary supplies in the presence of a female ACO. The used 
+sanitary supplies will be discarded and replaced with new supplies. It is the visitor's
+responsibility to provide sanitary supplies for the change.</p>
+	  <p>All visitors age 13 and above will abide by the "Dress Code for Female/Male Adult Visitors."</p>
+	  <h4><b>DRESS CODE FOR FEMALE/MALE ADULT VISITORS</b></h4>
+	  <p>
+	  <ul><li>Undergarmets (i.e. panties, bras, slips, boxers, briefs)</li>
+	  <ul>
+	      <li>Must be worn</li>
+		  <li>No bras without straps, no underwire or athletic bras</li>
+		  <li>Pantyhose do not constitute undergarment</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Dresses and Muumuus</li>
+	  <ul>
+		  <li>Must not be shorter than 2 inches above the kneecap when seated</li>
+		  <li>Must not have slits that rise higher than the kneecap when seated</li>
+		  <li>No false pockets</li>
+		  <li>Must be worn with slips</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Blouses and Tops</li>
+	  <ul>
+		  <li>Must not be tucked into pants/jeans </li>
+		  <li>Must have at least 3 inches overlap over the bottom garment (i.e. skirts, pants)</li>
+		  <li>Must have sleeves</li>
+		  <li>Must appropriately conceal shoulder, midriff, back, and cleavage (No sweaters or
+ jackets, or other clothing shall be used to conceal prohibited attire)</li>
+		  <li>Must have shoulder straps that are 2? inches wide, or wider (no strapless, spaghetti
+ straps, sleeveless clothing, halter-top, crop top, low cleavage tops, plunging necklines,
+ tube tops or bathing suits)</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Pants and Trousers</li>
+	  <ul>
+	      <li>No cuffs</li>
+		  <li>No false pockets</li>
+		  <li>No form-fitting, skin-tight, or see-through (no aerobic, spandex-type material)</li>
+		  <li>Must be comfortable and loose, but ensuring that it does not slip off</li>
+		  <li>Must be standard length, down to the ankle</li>
+		  <li>No shorts or capris</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Footwear</li>
+	  <ul>
+	      <li>Must wear slippers, sandals, or shoes</li>
+		  <li>No bare feet</li>
+		  <li>No all-solid, black-colored rubber slippers, zoris, or flip-flops</li>
+	  </ul>
+	  </ul>
+	  </p>
+	  <h4><b>PROHIBITED CLOTHING AND ITEMS FOR FEMALE/MALE ADULT VISITORS</b></h4>
+	  <p><li>No hats, caps, curlers, ponytails, buns, ribbons, hatbands, beads, braids, dreadlocks,
+curlers, scrunchies, clips, hair comb, hair picks, binders, stickpins, leis, flower, hair
+ornaments, bandanas, wigs, toupee, hair extensions (elastic rubber bands are only
+allowed to hold hair up)</li>
+		 <li>No bathing suits or lava lavas</li>
+		 <li>No sunglasses</li>
+		 <li>No jewelry</li>
+		 <li>No printed ?T? or polo shirts which display profanity, sexual symbols or facsimiles,
+symbols relating to drugs, gangs, narcotics, or slogans which are indicative of racial
+prejudices or violence, etc.</li>
+		 <li>No handbags (i.e. purses, wallets)</li>
+		 <li>No padded clothing</li>
+		 <li>No coveralls</li>
+		 <li>No lined-sweaters, jackets, and padded or hooded clothing</li>
+	  </p>
+	  <h4><b>DRESS CODE FOR CHILDREN (under the age of 13)</b></h4>
+	  <p>Children will be appropriately attired. Undergarments and footwear will be worn. A shirt, tshirt,
+or blouse worn with pants/trousers is allowed. Girls may wear muumuus or dresses.
+A minor female visitor, who is mature or maturing, will abide by the ?Dress Code for Female
+Adults.?</p>
+	  <h4><b>VISITORS WITH INFANTS OR BABIES</b></h4>
+	  <p>Diapers worn by infants or babies will be removed and changed in the presence of the
+screening ACO. The used diaper will be discarded and replaced with a clean diaper. It is the 
+visitor?s responsibility to bring a clean diaper for the change. Baby food, pacifiers, and baby
+carriers are strictly prohibited. Breast-feeding is not allowed. The following items are
+authorized into the visit area: 1 extra diaper, 1 plastic bottle of liquid (which shall be opened
+and checked), and 1 unlined, non-quilted, unpadded blanket.</p>
+    </div>
+        <footer class="w3-red w3-content">
+	<center class="w3-padding-xlarge"><a class="w3-padding-medium"><input class="w3-padding-jumbo w3-check" onclick="closeModal('id01')" type="checkbox" required name="dressCheck"></a>
+	<label  class="w3-xlarge w3-margin-top"><b>I accept the Dress Code Policy.</b></label></center>
+	</div>
+        </footer>
+	</div>
+
+
+<button id="id02-2" onclick="document.getElementById('id02').style.display='block'" class="w3-btn w3-red w3-large w3-padding w3-center">Accept Visitation</button>
+
+<div id="id02" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container w3-red"> 
+      <span onclick="document.getElementById('id02').style.display='none'" class="w3-closebtn">&times;</span>
+      <h2>Visitation Policy</h2>
+    </header>
+    <div class="w3-container">
+	  <h4><b>VISITATION PROCEDURES</b></h4>
+	  <p>Visitation is a privilege and not a right. These privileges may be restricted if either the
+inmate/visitor violates rules. An individual directed to leave OCCC premises due to rule
+violations/conduct and refuses compliance, will be charged with trespassing; also, visitation
+privileges may be suspended from the date of occurrence up to 1 year. Visitation schedules
+are subject to change/cancellation at any time.</p>
+	  <p>Inmate must submit a list of visitors for approval. Inmates are advised to submit visit requests
+to the Visitation Officer for all visitors (i.e. immediate family member, friends) during the first
+week of incarceration. The list shall consist of no more than 12 people including family
+members/friends. The Visitation Officer usually authorizes visitors to be placed on the
+approved list within 30 days. Immediate family members (i.e. father, mother, sister, brother,
+half-sister, half-brother, grandmother, grandfather, spouse, and inmates? own children) may
+visit for the first 30 days of incarceration. Proof of relationship must be provided. When a
+permanent visitation list is established at the end of the first 30 days, only those individuals on
+the approved list may be allowed to visit.</p>
+	  <p>Individuals on active parole/probation must obtain in writing, permission to visit. No former
+inmates will be allowed to visit unless prior written approval is granted from the Warden or the
+Warden?s designee. Former inmates must be off supervision and have the recommendation of
+their supervising agent. Even if the supervising agent recommends the visit it must still be
+approved in advance by the Warden and will be limited to immediate family members. Former
+inmates who were victims of the crime or convicted as part of the crime, will not be allowed to
+visit. Any rules that the PSD has regarding visits of this type will also apply and, approval will
+be required.</p>
+	  <p>During each visiting period, inmates are only allowed 2 visitors. Inmate?s parents are counted
+individually. ?Switching? of visitors while a visit is in progress is not permitted. Any minor child
+less than 17 years of age shall require an escort by a responsible authorized adult. An
+inmate?s own child, age 18 or older, may be appointed to be the responsible adult escort upon
+written approval from the child?s legal guardian by completing the Minor Consent Form that has
+been authorized by the Chief of Security. During the visit, the responsible adult escort shall
+remain with the minor child throughout the visit period. In the event the inmate is the sole
+guardian, the inmate may initiate in-house documentation selecting an adult from the approved
+visitor?s list to escort the minor child into OCCC. The Case Manager may assist in the
+preparation of these documents. Once a visit has commenced, no other person may join the
+visit. Before the visit, all visitors must sign the visitor?s log and secure all belongings in
+available lockers. OCCC shall not be held responsible for any loss/damage to visitor?s
+property</p>
+	  <p>Prior the visit, visitors are required to present an approved photo ID. Photos shall be
+identifiable with the bearer. Photo ID shall not be altered or fabricated. Approved ID is limited
+to the following: State ID card, driver?s license, passport, senior citizen bus pass, military ID,
+school ID (for minors 13-17 years of age), valid or expired cards may be used only if person is
+clearly identifiable.</p>
+	  <p>Adult visitors are required to sign the ?Notice and Consent to Search Form? as a condition for
+entering OCCC. All minors are covered under the consent of their legal guardian. All visitors
+and all items they carry shall be searched. All visitors are subject to the usual pat or frisk
+search and other methods including electronic, and residual/chemical screening. All visitors
+are subject to a strip search when there is probable cause or reasonable suspicion.</p>
+	  <p>For any intended visitor found with contraband, the visitor shall be denied the privileges of
+visiting and entering the facility. Contraband is anything not specifically authorized by the
+OCCC Warden for the use by any inmate or which inmates are prohibited from obtaining or
+possessing by status, rules, and regulations/directives. The Chief of Security shall determine
+restoration of future visit status.</p>
+	  <p>Due to confidentiality, the Visitation Officer or any staff member is not authorized to provide
+information regarding any inmate?s visitation list over the telephone. The inmate is responsible
+for informing visitors if they are approved to visit. The inmate will receive a copy of the original
+visit request that identifies the individuals authorized to visit.</p>
+	  <h4><b>VISITATION HOURS (FAMILY/FRIENDS)</b></h4>
+	  <p>Inmates are limited to 1 regular visit with family/friends per weekend. Visits shall occur on
+either Saturday or Sunday for up to 45 minutes. There are NO additional visits on State
+Holidays.</p>
+	  <h4><b>MAIN FACILITY</b></h4>
+	  <p>Modules 1, 2, 3, 4, 7, 8, 11, 13, 17, 18, 19, 20, and the Holding Unit: Continuously from
+6:45am-1:15pm, with (cut off time for checking in is at 12:15pm). NO entrance for visits
+accepted after 12:30pm.</p>
+	  <h4><b>ANNEX I (includes Makai and Mauka)</b></h4>
+	  <p>First sign-in time is at 7:45am. Visitation will commence at 8:00am.
+Second sign-in time is at 10:45am. Visitation will commence at 11:00am.</p>
+	  <h4><b>ANNEX II</b></h4>
+	  <p>7:00am-10:00am (cut off time at 9:15am)
+11:30am-12:45pm (cut off time at NOON)</p>
+	  <h4><b>LAUMAKA</b></h4>
+	  <p>7:00am-9:45am (cut-off time at 9:00am)
+11:00am-12:45pm (cut-off time at 12:00pm)</p>
+	  <h4><b>OFFICIAL VISITORS</b></h4>
+	  <p>Official visitors include attorneys, Child Protective Services (CPS) Case Workers, Probation/
+Parole, and other officials. Official visitors may call the inmate?s Case Manager prior to visit
+approval from the Chief of Security. The attorney-of-record may visit their client during normal
+official business hours without prior arrangements. Other individuals under escort by the
+attorney, such as interpreters and private investigators must obtain prior approval from the
+Chief of Security. Inmates should encourage their attorney to arrange visits in advance to
+avoid scheduling conflicts. Official visitors are encouraged to arrive as early as possible.</p>	
+	  <h4><b>VISITATION HOURS (OFFICIAL VISITORS)</b></h4>
+	  <p>Sunday through Saturday, from 7:00am-1:00pm, except State Holidays; All visits will be
+terminated at 1:00pm.</p>
+    </div>
+        <footer class="w3-red w3-content">
+	<center class="w3-padding-xlarge"><a class="w3-padding-medium"><input class="w3-padding-jumbo w3-check" onclick="closeModal('id02')" type="checkbox" required name="visitCheck"></a>
+	<label class="w3-xlarge w3-margin-top"><b>I accept the Visitation Policy.</b></label></center>
+	</div>
+        </footer>
+    </div>
+
+
+<button id="id03-3" onclick="document.getElementById('id03').style.display='block'" class="w3-btn w3-red w3-large w3-padding w3-center">Accept Terms</button>
+
+<div id="id03" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-8">
+    <header class="w3-container w3-red"> 
+      <span onclick="document.getElementById('id03').style.display='none'" class="w3-closebtn">&times;</span>
+      <h2>Terms of Agreement</h2>
+    </header>
+    <div class="w3-container">
+	  <h4><b>INMATE RESPONSIBILITIES</b></h4>
+      <p>Inmates are responsible for their actions. Any person involved in a law or rule violation within OCCC will face an Adjustment Committee Hearing and if found guilty, disciplinary sanction(s) will be imposed. Inmates are encouraged to contact the appropriate staff member to resolve a dispute.</p>
+      <h4><b>INMATE GRIEVANCE</b></h4>
+      <p>A grievance process exists to address inmate concerns. Prior to the submission of a formal grievance, inmates should first attempt to resolve complaints informally through the appropriate staff. If the inmate does not receive resolution, the inmate may file a grievance. All grievances are confidential. A family member cannot file a grievance on behalf of an inmate. </p>
+      <h4><b>TELEPHONE PRIVILEGES</b></h4>
+	  <p>During assigned times, inmates have access to a phone, based on a ?collect call.? Inmates may
+make local, inter-island, mainland, and international calls. Responsibility for payment rests with
+the party accepting the call. Three-way calls and pre-paid phone cards are prohibited. Personal
+phone times are limited, and are subject to being monitored. Phone calls are a privilege that can
+be revoked. Do not call OCCC for information, as no information will be provided due to privacy
+issues. Messages will not be delivered to any inmate. Do not call OCCC to speak to an inmate;
+authorization will not be granted to speak to any inmate.</p>
+<p>In the event of an emergency (i.e. information regarding the safety of an inmate, death in the
+family), request to speak to the Watch Commander and state the nature of the emergency. Do
+not leave this information on any electronic messaging system.</p>
+<p>NOTE: All inmate telephone calls are closely monitored with the exception of privileged calls
+to attorneys with Bar Association numbers, the Office of the Ombudsman, and the ACLU.</p>
+	  <h4><b>MAIL PROCEDURES</b></h4>
+	  <p>There is no limit on the amount of correspondence sent/received. Books, magazines, food
+items, etc. may not be sent to an inmate.</p>
+<p>All correspondence must go through approved channels. Staff monitors incoming/outgoing
+mail. Any suspicious mail that appears to cause a threat to the safety and security of OCCC
+may cause a delay in the processing. Mail shall be returned for the following reasons: first/last
+name and return address not listed, envelope has stickers, ink stamps, glitter, glue, drawings,
+bookmarks, lipstick/kiss marks, or inappropriate content (i.e. pornography, threatening
+remarks).</p>
+	  <h4><b>LEGAL MAIL</b></h4>
+	  <p>Mail from government officials, attorney of record, and the courts are considered Legal Mail.</p>
+	  <h4><b>MONEY PROCEDURES</b></h4>
+	  <p>Each inmate is assigned a facility account. The funds of this account are used to pay for
+commissary purchases, restitution payments, release money, or any other authorized payments.
+The OCCC Business Office handles all transactions, either in person or by mail. OCCC 
+Business Office hours are Monday through Friday, from 7:00am-1:30pm, except State Holidays.
+Deposits at the Business Office Window shall be in cash, U.S. currency only. Cash must be the
+exact amount, as change is not given. Personal checks are not accepted. Deposits made in
+person are limited to 1 deposit of $60.00 per depositor, for 1 inmate per day. Depositor must
+complete a deposit slip at the Main Entrance, and bring the form along with a valid photo
+identification (ID) card, to the Cashier?s Window. Valid photo ID card is limited to a current
+State ID card, passport, driver?s license, senior citizen bus pass, military ID, school ID, employer
+ID for Case Managers, attorney ID for Attorneys, and valid or expired card may be used only if
+person is clearly identifiable), to the Cashier?s Window. Individuals depositing money into the
+inmate?s account should be at least 18 years old.</p>
+	  <p>Within the first 30 days of incarceration, individuals making deposits must be an immediate
+family member (father, mother, sister, brother, half-sister, half-brother, grandmother,
+grandfather, spouse, and inmate?s own children), who may be asked for proof of relationship.
+Individuals depositing money into the inmate?s account after the first 30 days of incarceration
+must be on the inmate?s approved visitation list. Individuals stated above may send cashier?s
+checks, payroll, government and business checks for any amount, through the mail. The
+sender?s name and address on the cashier?s check must match the name on the return address
+on the envelope. Incomplete information will be returned to the address listed on the envelope.
+Cashier?s checks shall be made payable to OCCC/Inmate Name, and include the sender?s name
+and address. OCCC will not release information regarding an inmate?s account balance, verify
+receipt/non-receipt of funds by phone/letter. OCCC will only provide this information to the
+inmate. Concerns will be addressed back to the inmate through OCCC mail due to privacy
+issues.</p>
+<p>Suspicious or fraudulent deposits shall be placed on hold or deposited to the inmate?s account,
+if possible, and frozen spendable, until an investigation is completed. Deposits determined to
+be appropriate that were previously deposited as frozen spendable, will be made available for
+use by the inmate.</p>
+	  <h4><b>STORE ORDER</b></h4>
+	  <p>Inmates are allowed to purchase a store order totaling up to $80.00 every other week. The
+deadline to deposit money into an inmate?s account is Wednesday at 1:30pm.</p>
+	  <h4><b>WITHDRAWALS</b></h4>
+	  <p>Inmates may withdraw the balances of their accounts from Monday through Fridays, 7:00am-
+1:30pm, or up to 3:30pm for same day release. A photo ID is required when picking up money
+from the Business Office Window.</p>
+	  <h4><b>FEDERAL DETENTION CENTER</b></h4>
+	  <p>Inmates returning from the Federal Detention Center to state facilities will have their funds
+transferred to the OCCC Business Office. Checks are mailed from the federal lockbox directly
+to the facility. Inmates may pick up their funds once it is placed into their account.</p>
+	  <h4><b>VISITATION PROCEDURES</b></h4>
+	  <p>Visitation is a privilege and not a right. These privileges may be restricted if either the
+inmate/visitor violates rules. An individual directed to leave OCCC premises due to rule
+violations/conduct and refuses compliance, will be charged with trespassing; also, visitation
+privileges may be suspended from the date of occurrence up to 1 year. Visitation schedules
+are subject to change/cancellation at any time.</p>
+	  <p>Inmate must submit a list of visitors for approval. Inmates are advised to submit visit requests
+to the Visitation Officer for all visitors (i.e. immediate family member, friends) during the first
+week of incarceration. The list shall consist of no more than 12 people including family
+members/friends. The Visitation Officer usually authorizes visitors to be placed on the
+approved list within 30 days. Immediate family members (i.e. father, mother, sister, brother,
+half-sister, half-brother, grandmother, grandfather, spouse, and inmates? own children) may
+visit for the first 30 days of incarceration. Proof of relationship must be provided. When a
+permanent visitation list is established at the end of the first 30 days, only those individuals on
+the approved list may be allowed to visit.</p>
+	  <p>Individuals on active parole/probation must obtain in writing, permission to visit. No former
+inmates will be allowed to visit unless prior written approval is granted from the Warden or the
+Warden?s designee. Former inmates must be off supervision and have the recommendation of
+their supervising agent. Even if the supervising agent recommends the visit it must still be
+approved in advance by the Warden and will be limited to immediate family members. Former
+inmates who were victims of the crime or convicted as part of the crime, will not be allowed to
+visit. Any rules that the PSD has regarding visits of this type will also apply and, approval will
+be required.</p>
+	  <p>During each visiting period, inmates are only allowed 2 visitors. Inmate?s parents are counted
+individually. ?Switching? of visitors while a visit is in progress is not permitted. Any minor child
+less than 17 years of age shall require an escort by a responsible authorized adult. An
+inmate?s own child, age 18 or older, may be appointed to be the responsible adult escort upon
+written approval from the child?s legal guardian by completing the Minor Consent Form that has
+been authorized by the Chief of Security. During the visit, the responsible adult escort shall
+remain with the minor child throughout the visit period. In the event the inmate is the sole
+guardian, the inmate may initiate in-house documentation selecting an adult from the approved
+visitor?s list to escort the minor child into OCCC. The Case Manager may assist in the
+preparation of these documents. Once a visit has commenced, no other person may join the
+visit. Before the visit, all visitors must sign the visitor?s log and secure all belongings in
+available lockers. OCCC shall not be held responsible for any loss/damage to visitor?s
+property</p>
+	  <p>Prior the visit, visitors are required to present an approved photo ID. Photos shall be
+identifiable with the bearer. Photo ID shall not be altered or fabricated. Approved ID is limited
+to the following: State ID card, driver?s license, passport, senior citizen bus pass, military ID,
+school ID (for minors 13-17 years of age), valid or expired cards may be used only if person is
+clearly identifiable.</p>
+	  <p>Adult visitors are required to sign the ?Notice and Consent to Search Form? as a condition for
+entering OCCC. All minors are covered under the consent of their legal guardian. All visitors
+and all items they carry shall be searched. All visitors are subject to the usual pat or frisk
+search and other methods including electronic, and residual/chemical screening. All visitors
+are subject to a strip search when there is probable cause or reasonable suspicion.</p>
+	  <p>For any intended visitor found with contraband, the visitor shall be denied the privileges of
+visiting and entering the facility. Contraband is anything not specifically authorized by the
+OCCC Warden for the use by any inmate or which inmates are prohibited from obtaining or
+possessing by status, rules, and regulations/directives. The Chief of Security shall determine
+restoration of future visit status.</p>
+	  <p>Due to confidentiality, the Visitation Officer or any staff member is not authorized to provide
+information regarding any inmate?s visitation list over the telephone. The inmate is responsible
+for informing visitors if they are approved to visit. The inmate will receive a copy of the original
+visit request that identifies the individuals authorized to visit.</p>
+	  <h4><b>VISITATION HOURS (FAMILY/FRIENDS)</b></h4>
+	  <p>Inmates are limited to 1 regular visit with family/friends per weekend. Visits shall occur on
+either Saturday or Sunday for up to 45 minutes. There are NO additional visits on State
+Holidays.</p>
+	  <h4><b>MAIN FACILITY</b></h4>
+	  <p>Modules 1, 2, 3, 4, 7, 8, 11, 13, 17, 18, 19, 20, and the Holding Unit: Continuously from
+6:45am-1:15pm, with (cut off time for checking in is at 12:15pm). NO entrance for visits
+accepted after 12:30pm.</p>
+	  <h4><b>ANNEX I (includes Makai and Mauka)</b></h4>
+	  <p>First sign-in time is at 7:45am. Visitation will commence at 8:00am.
+Second sign-in time is at 10:45am. Visitation will commence at 11:00am.</p>
+	  <h4><b>ANNEX II</b></h4>
+	  <p>7:00am-10:00am (cut off time at 9:15am)
+11:30am-12:45pm (cut off time at NOON)</p>
+	  <h4><b>LAUMAKA</b></h4>
+	  <p>7:00am-9:45am (cut-off time at 9:00am)
+11:00am-12:45pm (cut-off time at 12:00pm)</p>
+	  <h4><b>OFFICIAL VISITORS</b></h4>
+	  <p>Official visitors include attorneys, Child Protective Services (CPS) Case Workers, Probation/
+Parole, and other officials. Official visitors may call the inmate?s Case Manager prior to visit
+approval from the Chief of Security. The attorney-of-record may visit their client during normal
+official business hours without prior arrangements. Other individuals under escort by the
+attorney, such as interpreters and private investigators must obtain prior approval from the
+Chief of Security. Inmates should encourage their attorney to arrange visits in advance to
+avoid scheduling conflicts. Official visitors are encouraged to arrive as early as possible.</p>	
+	  <h4><b>VISITATION HOURS (OFFICIAL VISITORS)</b></h4>
+	  <p>Sunday through Saturday, from 7:00am-1:00pm, except State Holidays; All visits will be
+terminated at 1:00pm.</p>	
+	  <h4><b>VISITOR DRESS CODE</b></h4>
+	  <p>Visitors will dress in a neat, appropriate, and conservative manner which is not unduly
+provocative, suggestive, or revealing, and does not resemble inmate attire or present
+adornments, or any clothing deemed inappropriate by staff. Medical alert bracelets, ID tags,
+and medical-approved eyewear are permitted.</p>
+	  <p>Female visitors will inform the female Search ACO of their menstrual period. Visitors shall be
+required to remove and change sanitary supplies in the presence of a female ACO. The used 
+sanitary supplies will be discarded and replaced with new supplies. It is the visitor's
+responsibility to provide sanitary supplies for the change.</p>
+	  <p>All visitors age 13 and above will abide by the "Dress Code for Female/Male Adult Visitors."</p>
+	  <h4><b>DRESS CODE FOR FEMALE/MALE ADULT VISITORS</b></h4>
+	  <p>
+	  <ul><li>Undergarmets (i.e. panties, bras, slips, boxers, briefs)</li>
+	  <ul>
+	      <li>Must be worn</li>
+		  <li>No bras without straps, no underwire or athletic bras</li>
+		  <li>Pantyhose do not constitute undergarment</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Dresses and Muumuus</li>
+	  <ul>
+		  <li>Must not be shorter than 2 inches above the kneecap when seated</li>
+		  <li>Must not have slits that rise higher than the kneecap when seated</li>
+		  <li>No false pockets</li>
+		  <li>Must be worn with slips</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Blouses and Tops</li>
+	  <ul>
+		  <li>Must not be tucked into pants/jeans </li>
+		  <li>Must have at least 3 inches overlap over the bottom garment (i.e. skirts, pants)</li>
+		  <li>Must have sleeves</li>
+		  <li>Must appropriately conceal shoulder, midriff, back, and cleavage (No sweaters or
+ jackets, or other clothing shall be used to conceal prohibited attire)</li>
+		  <li>Must have shoulder straps that are 2? inches wide, or wider (no strapless, spaghetti
+ straps, sleeveless clothing, halter-top, crop top, low cleavage tops, plunging necklines,
+ tube tops or bathing suits)</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Pants and Trousers</li>
+	  <ul>
+	      <li>No cuffs</li>
+		  <li>No false pockets</li>
+		  <li>No form-fitting, skin-tight, or see-through (no aerobic, spandex-type material)</li>
+		  <li>Must be comfortable and loose, but ensuring that it does not slip off</li>
+		  <li>Must be standard length, down to the ankle</li>
+		  <li>No shorts or capris</li>
+	  </ul>
+	  </ul>
+	  <ul><li>Footwear</li>
+	  <ul>
+	      <li>Must wear slippers, sandals, or shoes</li>
+		  <li>No bare feet</li>
+		  <li>No all-solid, black-colored rubber slippers, zoris, or flip-flops</li>
+	  </ul>
+	  </ul>
+	  </p>
+	  <h4><b>PROHIBITED CLOTHING AND ITEMS FOR FEMALE/MALE ADULT VISITORS</b></h4>
+	  <p><li>No hats, caps, curlers, ponytails, buns, ribbons, hatbands, beads, braids, dreadlocks,
+curlers, scrunchies, clips, hair comb, hair picks, binders, stickpins, leis, flower, hair
+ornaments, bandanas, wigs, toupee, hair extensions (elastic rubber bands are only
+allowed to hold hair up)</li>
+		 <li>No bathing suits or lava lavas</li>
+		 <li>No sunglasses</li>
+		 <li>No jewelry</li>
+		 <li>No printed ?T? or polo shirts which display profanity, sexual symbols or facsimiles,
+symbols relating to drugs, gangs, narcotics, or slogans which are indicative of racial
+prejudices or violence, etc.</li>
+		 <li>No handbags (i.e. purses, wallets)</li>
+		 <li>No padded clothing</li>
+		 <li>No coveralls</li>
+		 <li>No lined-sweaters, jackets, and padded or hooded clothing</li>
+	  </p>
+	  <h4><b>DRESS CODE FOR CHILDREN (under the age of 13)</b></h4>
+	  <p>Children will be appropriately attired. Undergarments and footwear will be worn. A shirt, tshirt,
+or blouse worn with pants/trousers is allowed. Girls may wear muumuus or dresses.
+A minor female visitor, who is mature or maturing, will abide by the ?Dress Code for Female
+Adults.?</p>
+	  <h4><b>VISITORS WITH INFANTS OR BABIES</b></h4>
+	  <p>Diapers worn by infants or babies will be removed and changed in the presence of the
+screening ACO. The used diaper will be discarded and replaced with a clean diaper. It is the 
+visitor?s responsibility to bring a clean diaper for the change. Baby food, pacifiers, and baby
+carriers are strictly prohibited. Breast-feeding is not allowed. The following items are
+authorized into the visit area: 1 extra diaper, 1 plastic bottle of liquid (which shall be opened
+and checked), and 1 unlined, non-quilted, unpadded blanket.</p>
+	  <h4><b>PRESCRIPTION MEDICATION</b></h4>
+	  <p>Prescription medication will be allowed into OCCC only if the label is intact and legible, and the
+name on the label can be identified to the individual. Upon arrival, all prescription medications
+must be declared at the Main Entrance. The Main Entrance Officer will notify the Module 9-
+Visit Area Officer on the amount and type of medication(s). Visitors will surrender the
+medication to the Module 9-Visit Area Officer for the duration of the visit. If medication is
+needed during the visit, the officer will allow the visitor to ingest their necessary medication and
+the visit will continue.</p>
+	  <h4><b>SPECIAL VISITATION</b></h4>
+	  <p>Special Visitation may be granted to visitors who do not reside on the island of Oahu and is not
+on the inmate?s approved visitation list. Special visits are granted during normal business
+hours. Inmates must submit requests stating the time and date of the visit to their Case
+Manager. Inmates must submit their request at least 7 days before the expected visit to obtain
+the necessary approvals for the special visit. The Chief of Security may disapprove any
+request. Visitors are required to show proof of travel (i.e. plane ticket) and proper photo ID.</p>
+	  <h4><b>INMATE PROPERTY PROCEDURES</b></h4>
+	  <p>An inmate?s personal property is stored in the OCCC Property Room. All newly admitted
+inmates are informed that an authorized representative must pick up personal property within
+30 days. Inmates not submitting a written authorization for property pick up will have their
+property disposed of after 30 days. Individuals who have been authorized to pick up and drop
+off inmate?s personal property must do so on either Tuesdays or Thursdays, from 10:00am-
+4:00pm, excluding State Holidays. Call the OCCC Property Room at (808) 832-1247, to
+ensure authorization to pick up/drop off property.</p>
+	  <p>Upon written request and authorization, the inmate may be allowed to have 1 pair of athletic
+shoes for recreation. The shoes must be new, accompanied with the original receipt, and the
+value of the shoes must not be more than $30.00 US dollars.</p>
+	  <p>Inmates scheduled for a jury trial, may have court clothes brought to the Property Room in
+exchange for their civilian clothes. Court clothes will only be accepted if the inmate has
+submitted an approved request to the Property Room. Only 1 shirt, 1 pair of pants, and 1 pair
+of dress shoes will be allowed for an exchange. Belts, socks, or shoes with laces will not be
+accepted.</p>
+	  <h4><b>BAIL, RELEASES, AND SUPERVISED RELEASE ISSUES</b></h4>
+	  <p>For information on an inmate?s bail amount, call OCCC?s Module 5-Inmate Release Unit at
+(808) 832-1652 or 832-1653 as to the following procedures to post bail. Depending on where
+the inmate?s charges are being heard, bail is posted at either the First Circuit Court or the
+Honolulu District Court</p>
+	  <p>Bail can only be paid in cash or a cashier?s check payable to either the Circuit Court of the
+First Circuit or District Court of the First Circuit. Bail can be posted at the courts from 7:45am-
+4:00pm, Mondays through Fridays, closed on State Holidays. Circuit Court?s cashier window is
+located on the first floor at 777 Punchbowl Street. Honolulu District Court?s cashier window is
+located on the fourth floor at 1111 Alakea Street. After court hours, bail for both District and
+Circuit Court cases can be posted at the Honolulu District Court, 1111 Alakea Street through
+the Sheriffs. Call the Sheriff?s Division at (808) 538-5696 for further information.</p>
+	  <p>Once bail is paid/posted, the receipt should be taken from the court or Sheriff to OCCC?s Main
+Entrance Officer to begin the inmate?s release process. All other scheduled releases occur at
+various times. OCCC does not address individual release time questions.</p>
+	  <p>For questions related to a pending criminal cases, assistance in applying for Supervised
+Release, or hearing date for a Motion for Supervised Release, call the Public Defender or the
+attorney retained by the inmate.</p>
+	  <p>For questions related to a defendant?s released date for Supervised Release, call OCCC?s
+Module 5-Intake Release Unit at (808) 832-1653.</p>
+	  <p>For sponsors or individuals on Supervised Release with concerns, call the Pretrial Officer at
+the Oahu Intake Service Center (OISC) at (808) 832-1497.</p>
+	</div>
+        <footer class="w3-red w3-content">
+	<center class="w3-padding-xlarge"><a class="w3-padding-medium"><input class="w3-padding-jumbo w3-check" onclick="closeModal('id03')" type="checkbox" required name="termCheck"></a>
+	<label  class="w3-xlarge w3-margin-top"><b>I accept the Terms.</b></label></center>
+	</div>
+        </footer>
+    </div>
+</div
+
+
+            <!--#####################################SECOND VISITOR######################################-->
+
+
+
+            <a class="w3-large">
+            </a>
+            <center><a class="w3-large">Second Visitor? <input onclick="showContent('visitor2')" class="w3-check w3-hover-shadow" type="checkbox">
+                    </a>
+            </center>
+            <div id="visitor2" class=" w3-hide">
+                <hr class="w3-border-green w3-border w3-round-jumbo w3-card-2">
+                <div>
+                    <h3>
+                        <center><a>Second Visitor Information</a></center>
+                    </h3>
+                </div>
+                <h4>
+                    <center>Minor: <input onclick="minorFunction('2')" type="checkbox" name="minor" class="w3-check" id="minor"><br></center>
+                </h4>
+                <div class="w3-row w3-row-padding w3-padding-8">
+                    <div class="w3-col l5 m5 s5" id="avfName2">
+                        <label>First Name</label>
+                        <input type="text" name="vFName2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vFName2" placeholder="First Name" maxlength="30">
+                    </div>
+                    <div class="w3-col l2 m2 s2" id="avMName2">
+                        <label>M.I.</label>
+                        <input type="text" name="vMName2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vMName2" placeholder="Middle Initial" maxlength="3">
+                    </div>
+                    <div class="w3-col l5 m5 s5" id="avLName2">
+                        <label>Last Name</label>
+                        <input type="text" name="vLName2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vLName2" placeholder="Last Name" maxlength="30">
+                    </div>
+                </div>
+                <div class="w3-row w3-row-padding w3-padding-8">
+                    <div class="w3-col l3 m3 s3" id="avDOB">
+                        <label>Date of Birth</label>
+                        <input type="date" name="vDOB2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vDOB2" placeholder="Visitor date of birth">
+                    </div>
+                    <div class="w3-col l5 m5 s5" id="avEmail2">
+                        <label>Email Address</label>
+                        <input type="text" name="vEmail2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vEmail2" placeholder="Email" maxlength="25">
+                    </div>
+                    <div class="w3-col l2 m2 s2" id="avPhone2">
+                        <label>Phone Number</label>
+                        <input type="text" name="vPhone2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vPhone2" placeholder="Phone Number" maxlength="10" minlength="10" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+                    </div>
+                    <div class="w3-col l2 m2 s2" id="avSSN2">
+                        <label>SSN</label>
+                        <input type="text" name="vSSN2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vSSN2" placeholder="SSN" maxlength="9" minlength="9" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+                    </div>
+                </div>
+                <div class="w3-row w3-row-padding w3-padding-8">
+                    <div class="w3-col l4 m4 s4" id="avAddress2">
+                        <label>Street Address</label>
+                        <input type="text" name="vAddress2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vAddress2" placeholder="Address" maxlength="30">
+                    </div>
+                    <div class="w3-col l3 m3 s3" id="avCity2">
+                        <label>City</label>
+                        <input type="text" name="vCity2" class="w3-input w3-border w3-round w3-card-2 w3-card-2 w3-hover-shadow" id="vCity2" placeholder="City" maxlength="30">
+                    </div>
+                    <div class="w3-col l1 m1 s1" id="avZip2">
+                        <label>Zip Code</label>
+                        <input type="text" name="vZip2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vZip2" placeholder="Zip" maxlength="5" minlength="5" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
+                    </div>
+                    <div class="w3-col l4 m4 s4" id="avRelation2">
+                        <label>
+                     Relationship to Inmate
+                  </label>
+                        <input type="text" name="vRelation2" class="w3-input w3-border w3-round w3-card-2 w3-hover-shadow" id="vRelation2" placeholder="Relationship" maxlength="30">
+                    </div>
+                </div>
+                <div class="w3-row w3-row-padding w3-padding-8">
+                    <div class="w3-col l4 m4 s4" id="avSignature2">
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <input class="w3-btn w3-ripple w3-green w3-right" type="submit" name="submit" value="Submit">
+    </form>
+
+
+
+    <!-- ##########################################SHOW CONTENT########################################## -->
+    <script>
+        function showContent(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-hide") == -1) {
+                x.className += " w3-hide";
+            } else {
+                x.className = x.className.replace(" w3-hide", "");
+            }
+        }
+    </script>
+    <!-- ##########################################MENU TOGGLE########################################## -->
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+    <!-- ##########################################CLEAR SIGNATURE CANVAS########################################## -->
+    <script>
+        function clearCanvas(id) {
+            var canvas = document.getElementById('canvasPad' + id);
+            var context = canvas.getContext('2d');
+            context.fillStyle = "white";
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var x = document.getElementById('dataPad' + id);
+            x.value = "";
+        }
+    </script>
+    <!-- ##########################################Minor Function Show########################################## -->
+    <script>
+        function minorFunction(id) {
+            var a = document.getElementById('avAddress' + id);
+            var b = document.getElementById('avCity' + id);
+            var c = document.getElementById('avZip' + id);
+            var d = document.getElementById('avEmail' + id);
+            var e = document.getElementById('avPhone' + id);
+            var f = document.getElementById('avSSN' + id);
+            var g = document.getElementById('avSignature' + id);
+            if (a.className.indexOf("w3-hide") == -1) {
+                a.className += " w3-hide";
+                b.className += " w3-hide";
+                c.className += " w3-hide";
+                d.className += " w3-hide";
+                e.className += " w3-hide";
+                f.className += " w3-hide";
+                g.className += " w3-hide";
+                document.getElementById('vAddress' + 2).required = false;
+                document.getElementById('vCity' + 2).required = false;
+                document.getElementById('vZip' + 2).required = false;
+                document.getElementById('vEmail' + 2).required = false;
+                document.getElementById('vPhone' + 2).required = false;
+                document.getElementById('vSSN' + 2).required = false;
+                document.getElementById('vSignature' + 2).required = false;
+		document.getElementById('avSignature' + 2).innerHTML =  ``;
+            } else {
+                a.className = a.className.replace(" w3-hide", "");
+                b.className = b.className.replace(" w3-hide", "");
+                c.className = c.className.replace(" w3-hide", "");
+                d.className = d.className.replace(" w3-hide", "");
+                e.className = e.className.replace(" w3-hide", "");
+                f.className = f.className.replace(" w3-hide", "");
+                g.className = g.className.replace(" w3-hide", "");
+                document.getElementById('vAddress' + 2).required = true;
+                document.getElementById('vCity' + 2).required = true;
+                document.getElementById('vZip' + 2).required = true;
+                document.getElementById('vEmail' + 2).required = true;
+                document.getElementById('vPhone' + 2).required = true;
+                document.getElementById('vSSN' + 2).required = true;
+                document.getElementById('vSignature' + 2).required = true;
+		document.getElementById('avSignature' + 2).innerHTML =  `<p class="drawItDesc">Visitor #2 Signature</p>
+                        <div class="sigPad2">
+                            <div class="sig sigWrapper current">
+                                <canvas class="pad w3-border w3-round w3-card-2 w3-hover-shadow" id="canvasPad2" width="600px" height="80px" style="border:1px solid #000000"></canvas>
+                                <input type="hidden" name="dataPad2" class="output" id="dataPad2">
+                            </div>
+                        </div>
+                        <button name="test2" onclick="clearCanvas('2')">Clear Signature</button>`;
+            }
+
+        }
+    </script>
+    <!-- ##########################################SCRIPT FOR SHOW CONTENT########################################## -->
+    <script>
+        function showContent(id) { //open function
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-hide") == -1) { //if open
+                x.className += " w3-hide";
+                //False = NOT required when "Add another visitor" is checked\\
+                document.getElementById('vFName' + 2).required = false;
+                document.getElementById('vMName' + 2).required = false;
+                document.getElementById('vLName' + 2).required = false;
+                document.getElementById('vRelation' + 2).required = false;
+                document.getElementById('vAddress' + 2).required = false;
+                document.getElementById('vCity' + 2).required = false;
+                document.getElementById('vZip' + 2).required = false;
+                document.getElementById('vEmail' + 2).required = false;
+                document.getElementById('vPhone' + 2).required = false;
+                document.getElementById('vSSN' + 2).required = false;
+		document.getElementById('avSignature' + 2).innerHTML =  ``;
+            } //if close
+            else { //else open
+                x.className = x.className.replace(" w3-hide", "");
+                //True = required when "Add another visitor" is checked\\
+                document.getElementById('vFName' + 2).required = true;
+                document.getElementById('vMName' + 2).required = true;
+                document.getElementById('vLName' + 2).required = true;
+                document.getElementById('vRelation' + 2).required = true;
+                document.getElementById('vAddress' + 2).required = true;
+                document.getElementById('vCity' + 2).required = true;
+                document.getElementById('vZip' + 2).required = true;
+                document.getElementById('vEmail' + 2).required = true;
+                document.getElementById('vPhone' + 2).required = true;
+                document.getElementById('vSSN' + 2).required = true;
+		document.getElementById('avSignature' + 2).innerHTML =  `<p class="drawItDesc">Visitor #2 Signature</p>
+                        <div class="sigPad2">
+                            <div class="sig sigWrapper current">
+                                <canvas class="pad w3-border w3-round w3-card-2 w3-hover-shadow" id="canvasPad2" width="600px" height="80px" style="border:1px solid #000000"></canvas>
+                                <input type="hidden" name="dataPad2" class="output" id="dataPad2">
+                            </div>
+                        </div>
+                        <button name="test2" onclick="clearCanvas('2')">Clear Signature</button>`;
+		//alert("id");
+
+            } //else close
+        } //close function
+    </script>
+    <!-- ##########################################SCRIPTS FOR MODAL########################################## -->
+<script>
+    function closeModal(id) { //id01 id02 id03
+    x = document.getElementById(id)
+    x.style.display='none'
+    if (id == "id01") {
+        y = document.getElementById(id+"-1");
+            if (y.className.indexOf("w3-green") == -1) {
+                y.className = y.className.replace("w3-red", "w3-green");
+                } else {
+	        y.className = y.className.replace("w3-green", "w3-red");
+                }//close else
+    }//close if
+    if (id == "id02") {
+        y = document.getElementById(id+"-2");
+            if (y.className.indexOf("w3-green") == -1) {
+                y.className = y.className.replace("w3-red", "w3-green");
+                } else {
+	        y.className = y.className.replace("w3-green", "w3-red");
+                }//close else
+    }//close if
+        if (id == "id03") {
+        y = document.getElementById(id+"-3");
+            if (y.className.indexOf("w3-green") == -1) {
+                y.className = y.className.replace("w3-red", "w3-green");
+                } else {
+	        y.className = y.className.replace("w3-green", "w3-red");
+                }//close else
+        }//close if
+    }//ends function
+</script>
+    <!-- ##########################################SCRIPTS FOR SIGNATURE########################################## -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="flashcanvas.js"></script>
+    <script type="text/javascript" src="json2.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript" src="jquery.signaturepad.min.js"></script>
+
+
+</body>
+
+</html>
