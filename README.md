@@ -2,7 +2,7 @@
 https://www.youtube.com/watch?v=fx9EGhxjhnI 
 
 
-The WHY:
+<b>The WHY:</b>
 Oahu Community Correctional Center has a lengthy and troublesome visitation process.  Many of the visitors fill out numerous forms and wait all day just to get denied because of something missing.  
 
 We held a meeting with the OCCC staff and identified key aspects and problems in their visitor registration process. In result, HATS has implemented an automated visitation process for OCCC by creating a website for the visitors to submit an online form. As you can see, the visitors are able to input all of their information and add any additional visitors.  Once finished, they can submit the form and will be processed and sent to the database were OCCC staff can approve the form. From there, the OCCC Staff can approve and verify meeting times and general information of the visitors.
