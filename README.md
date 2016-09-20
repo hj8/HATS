@@ -27,6 +27,8 @@ Step 5: Profit<br>
 <h3><b>The INSTALL: </b><br></h3>
 We designed our install with infrastructure and the potential to implement defense in depth. Our install environment consisted of three CentOS 7 and a Ubuntu host (don't ask why) each hosting a different portion of our product as they reside on different network segments. For example, the registration form is online, publicly accessible; while the authorization and verification process reside on two different interal networks at OCCC. As such, it made sense for us to implement in a manner that would reflect this concept. 
 
+Our code can simply be dropped in the root of any http server that is able to run php and php-pgsql. Configration changes to the database may need to be made to point to the correct IP address. We highly recommend if you're going to demo our code, to review the above links that point to hacc.hats.team:81,83,84
+
 Our internal network:<br>
 -192.168.254.21: <b>CentOS Registation Box</b><br>
   yum install httpd php php-common php-pgsql<br>
