@@ -1,4 +1,4 @@
-# Hawaii Advanced Technology Society's HACC submission. http://hats.team
+# Hawaii Advanced Technology Society's: http://hats.team OCCC HACC Submission
 Interested in this application? View the demo here: https://www.youtube.com/watch?v=fx9EGhxjhnI 
 
 <h3><b>The WHY:</b><br></h3>
