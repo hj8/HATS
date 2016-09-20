@@ -27,15 +27,15 @@ Step 5: Profit<br>
 <h3><b>The INSTALL: </b><br></h3>
 We designed our install with infrastructure and the potential to implement defense in depth. Our install environment consisted of three CentOS 7 and a Ubuntu host (don't ask why) each hosting a different portion of our product as they reside on different network segments. For example, the registration form is online, publicly accessible; while the authorization and verification process reside on two different interal networks at OCCC. As such, it made sense for us to implement in a manner that would reflect this concept. 
 
-Our internal network:
--192.168.254.21: CentOS Registation Box<br>
+Our internal network:<br>
+-192.168.254.21: <b>CentOS Registation Box</b><br>
   yum install httpd php php-common php-pgsql<br>
 
--192.168.254.25: Ubuntu PostGresql Database<br>
+-192.168.254.25: <b>Ubuntu PostGresql Database</b><br>
   tar -xzvf postgresql-9.5.4.tar.gz<br>
   
--192.168.254.31: CentOS Authorization<br>
+-192.168.254.31: <b>CentOS Authorization</b><br>
   yum install httpd php php-common php-pgsql<br>
 
--192.168.254.35: CentOS Verification<br>
+-192.168.254.35: <b>CentOS Verification</b><br>
   yum install httpd php php-common php-pgsql<br>
